@@ -1,0 +1,22 @@
+<!--templates/base.html-->
+{% load static %}
+
+<html>
+    <head>
+        <title>Store Application</title>
+        <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>
+                <a href="{% url 'home' %}">Home</a> | <a href="{% url 'books' %}">Books</a> | <a href="{% url 'journals' %}">Journals</a>
+            </h1>
+        </header>
+
+        <div>
+            {% block content %}
+            {% endblock content %}
+        </div>
+
+    </body>
+</html>
